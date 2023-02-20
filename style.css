@@ -1,0 +1,33 @@
+.toggle {
+  width: 200px;
+  height: 100px;
+  appearance: none;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 16px 1px regba(0, 0, 0, 0, 24);
+  background-color: #c0bcbb;
+  position: relative;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.toggle:checked {
+  background-color: green;
+}
+
+.toggle:before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.toggle:checked:before {
+  left: 100px;
+}
